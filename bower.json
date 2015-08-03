@@ -1,0 +1,9 @@
+{
+  "name": "beerApp",
+  "dependencies": {
+    "fontawesome": "~4.4.0",
+    "FitText.js": "master",
+    "angular-foundation": "master",
+    "foundation": "master"
+  }
+}

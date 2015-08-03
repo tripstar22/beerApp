@@ -1,0 +1,22 @@
+{
+  "author": {
+    "name": "Pinecone, LLC"
+  },
+  "name": "angular-foundation",
+  "main": [
+    "./mm-foundation-tpls.js"
+  ],
+  "dependencies": {
+    "angular": ">=1"
+  },
+  "homepage": "https://github.com/pineconellc/angular-foundation-bower",
+  "_release": "ff23c3a02f",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "ff23c3a02f8f931caaeb10f346d7b85baf4e2242"
+  },
+  "_source": "git://github.com/pineconellc/angular-foundation-bower.git",
+  "_target": "master",
+  "_originalSource": "angular-foundation"
+}
