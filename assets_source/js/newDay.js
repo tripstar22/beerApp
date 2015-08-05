@@ -8,7 +8,7 @@ function newDay() {
 
 	    if (day == 'Sunday') {
 
-	    	$("h2").html("Sunday Funday!");
+	    	$("h2").html("Sunday Funday");
 	    }
 	    else if (day == 'Monday') {
 
@@ -16,19 +16,19 @@ function newDay() {
 	    }
 	    else if (day == 'Tuesday') {
 
-	    	$("h2").html("Tuesday Brewsday!");
+	    	$("h2").html("Tuesday Brewsday");
 	    }
 	    else if (day == 'Wednesday') {
 
-	    	$("h2").html("Happy Humpday!");
+	    	$("h2").html("Happy Humpday");
 	    }
 	    else if (day == 'Thursday') {
 
-	    	$("h2").html("Thristy Thursday!");
+	    	$("h2").html("Thristy Thursday");
 	    }
 	    else if (day == 'Friday') {
 
-	    	$("h2").html("Freedom Friday!");
+	    	$("h2").html("Freedom Friday");
 	    }
 	    else {
 

@@ -3,10 +3,35 @@
 @media only screen {
 
 	div.rowTitle {
+		margin-bottom: 1.0em;
 
 		h1 {
 			@include fontBold;
 			text-transform: uppercase;
+		}
+	}
+
+	div.rowDay {
+		margin-bottom: 1.0em;
+
+		h2 {
+			@include fontStd;
+		}
+	}
+
+	p.paraLead {
+		@include fontSemiBold;
+	}
+
+	ul {
+		margin-left: 0;
+		list-style: none;
+	}
+
+	ul.iconsSocial {
+
+		li {
+			@include inlineBlock;
 		}
 	}
 
@@ -17,7 +42,16 @@
 // Medium screens
 @media only screen and (min-width: 40.063em) {
 
+	p.paraLead {
+		font-size: 1.250em;
+	}
 
+	ul.iconsSocial {
+
+		li:nth-child(-n+2) {
+			margin-right: 0.20em;
+		}
+	}
 
 } /* min-width 641px, medium screens */
 
@@ -26,7 +60,13 @@
 // Large screens
 @media only screen and (min-width: 64.063em) {
 
+	div.rowTitle {
+		margin-bottom: 2.0em;
+	}
 
+	div.rowDay {
+		margin-bottom: 2.250em;
+	}
 
 } /* min-width 1025px, large screens */
 
