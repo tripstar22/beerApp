@@ -1,0 +1,61 @@
+
+/*============================================
+=            FOUNDATION COMPONETS            =
+============================================*/
+
+@import "../bower_components/foundation/scss/foundation";
+
+/*-----  End of FOUNDATION COMPONETS  ------*/
+
+
+/*=================================
+=            VARIABLES            =
+=================================*/
+
+@import
+	"vars/colors";
+
+/*-----  End of VARIABLES  ------*/
+
+
+/*=============================
+=            FONTS            =
+=============================*/
+
+@import
+	"fonts/fonts";
+
+/*==========  GOOGLE FONTS IMPORT  ==========*/
+@import url(http://fonts.googleapis.com/css?family=Cabin|Titan+One);
+
+/*-----  End of FONTS  ------*/
+
+
+/*==============================
+=            MIXINS            =
+==============================*/
+
+@import
+	"mixins/inlineBlock",
+	"mixins/borderRadius";
+
+/*-----  End of MIXINS  ------*/
+
+
+/*===============================
+=            MODULES            =
+===============================*/
+
+
+
+/*-----  End of MODULES  ------*/
+
+
+/*================================
+=            PARTIALS            =
+================================*/
+
+@import
+	"partials/main";
+
+/*-----  End of PARTIALS  ------*/

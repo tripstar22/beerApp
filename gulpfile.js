@@ -65,7 +65,6 @@ gulp.task('css', ['sass'], function () {
     stream = gulp.src(
         [
             base_src + 'bower_components/foundation/css/normalize.min.css',
-            base_src + 'bower_components/foundation/css/foundation.min.css',
             base_src + 'bower_components/fontawesome/css/font-awesome.min.css',
             base_src + 'css/app.css'
         ])
@@ -90,7 +89,9 @@ gulp.task('js', ['clean-dest-js'], function () {
                 base_src + 'bower_components/angular/angular.min.js',
                 base_src + 'bower_components/angular-foundation/mm-foundation-tpls.min.js',
                 base_src + 'bower_components/angular-foundation/mm-foundation.min.js',
+                base_src + 'bower_components/foundation/foundation.min.js',
                 base_src + 'bower_components/FitText.js/jquery.fittext.js',
+                base_src + 'js/newDay.js',
                 base_src + 'js/app.js'
             ]
         )
