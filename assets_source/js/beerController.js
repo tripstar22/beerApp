@@ -1,9 +1,9 @@
 
 // define module
-var beerApp = angular.module('beerApp', ['SpreadsheetFactory']);
+var beerApp = angular.module('beerApp');
 
 // define controller
-beerApp.controller('beerController', function($scope) {
+beerApp.controller('beerController', function($scope, SpreadsheetFactory) {
 	$scope.brews = [
 		{
 			name: 'Emergency Drinking Beer',
