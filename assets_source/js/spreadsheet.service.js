@@ -1,8 +1,11 @@
 (function () {
 
-angular
-  .module('onTap')
-  .factory('Content', SpreadsheetFactory);
+var beerApp = angular
+  .module('beerApp', [])
+  .factory('Content', SpreadsheetFactory)
+  .controller('beerController', function($scope, SpreadsheetFactory) {
+    $scope.brews = SpreadsheetFactory.getData();
+  });
 
   function SpreadsheetFactory ($http, $q) {
 
@@ -34,3 +37,5 @@ angular
   }
 
 })();
+
+

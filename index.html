@@ -52,16 +52,16 @@
 			</div><!-- /row -->
 		</div><!-- /hero -->
 
-		<div class="row searchWrap" data-ng-controller="SimpleController">
+		<div class="row searchWrap" data-ng-controller="beerController">
 			<div class="large-12 medium-12 small-12 columns">
 				<div class="row collapse">
-					<div class="large-8 medium-8 small-12 columns">
-						<input type="text" placeholder="Search brews&#8230;" data-ng-model="name">
+					<div class="large-8 large-centered medium-8 medium-centered small-12 columns">
+						<input type="text" placeholder="Search brews&#8230;" data-ng-model="contentItemData">
 					</div>
 				</div><!-- /row collapse -->
 
 				<ul class="listBrews">
-					<li data-ng-repeat="brew in brews | filter: name">{{brew.name}} - {{brew.brewery}} - {{brew.percent}} - {{brew.style}} - {{brew.price}} - {{brew.pour}}</li>
+					<li data-ng-repeat="brew in brews | filter: name | orderBy: 'brewery'">{{contentItemName}} - {{contentItemData}}</li>
 				</ul>
 			</div>
 		</div><!-- /row -->
@@ -84,38 +84,5 @@
 
 		<!-- SCRIPTS -->
 		<script type="text/javascript" src="assets/js/all.min.js"></script>
-
-		<script type="text/javascript">
-		var beerApp = angular.module('beerApp', []);
-
-		beerApp.controller('SimpleController', function($scope) {
-			$scope.brews = [
-				{
-					name: 'Emergency Drinking Beer',
-					brewery: 'Wild Heaven',
-					percent: '4.00',
-					style: 'ale',
-					price: '$4.00',
-					pour: '12 oz'
-				},
-				{
-					name: 'Mudhoney',
-					brewery: 'Burnt Hickory',
-					percent: '6.80',
-					style: 'brown',
-					price: '$5.00',
-					pour: '8 oz'
-				},
-				{
-					name: 'Moonlight Drive',
-					brewery: 'Southbound',
-					percent: '8.875',
-					style: 'coffee stout',
-					price: '$6.00',
-					pour: '8 oz'
-				}
-			]
-		});
-		</script>
 	</body>
 </html>
