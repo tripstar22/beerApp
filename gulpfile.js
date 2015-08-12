@@ -70,10 +70,10 @@ gulp.task('css', ['sass'], function () {
         ])
 
         // Concat CSS Files
-        .pipe(concat('all.min.css'))
+        .pipe(concat('all.css'))
 
         // Minify CSS
-        .pipe(minifyCSS())
+        // .pipe(minifyCSS())
 
         // Move to Final Destination
         .pipe(gulp.dest(base_dest + 'css/'));
