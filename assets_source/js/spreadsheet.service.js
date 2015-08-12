@@ -1,7 +1,7 @@
 (function () {
 
 var beerApp = angular
-  .module('beerApp', [])
+  .module('beerApp')
   .factory('Content', SpreadsheetFactory)
   .controller('beerController', function($scope, SpreadsheetFactory) {
     $scope.brews = SpreadsheetFactory.getData();
