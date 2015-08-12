@@ -92,6 +92,8 @@ gulp.task('js', ['clean-dest-js'], function () {
                 base_src + 'bower_components/foundation/foundation.min.js',
                 base_src + 'bower_components/FitText.js/jquery.fittext.js',
                 base_src + 'js/newDay.js',
+                // base_src + 'js/spreadsheet.service.js',
+                base_src + 'js/beerApp.js',
                 base_src + 'js/app.js'
             ]
         )
@@ -118,8 +120,13 @@ gulp.task('js', ['clean-dest-js'], function () {
 
 gulp.task('copy', ['clean-dest-images', 'clean-dest-fonts'], function () {
 
+    stream = gulp.src([base_src + 'images/*', base_src + 'colorpicker/dist/img/bootstrap-colorpicker/*'])
 
-    stream = gulp.src([base_src + 'fonts/*', base_src + 'bower_components/fontawesome/fonts/*'])
+        // Move to Final Destination
+        .pipe(gulp.dest(base_dest + 'images/'));
+
+
+    stream = gulp.src([base_src + 'fonts/*', base_src + 'images/*', base_src + 'bower_components/fontawesome/fonts/*'])
 
         // Move to Final Destination
         .pipe(gulp.dest(base_dest + 'fonts/'));

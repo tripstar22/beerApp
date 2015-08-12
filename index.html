@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-ng-app="beerApp">
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -30,30 +30,38 @@
 		</div>
   		<![endif]-->
 
-		<div class="row rowTitle">
-			<div class="large-12 medium-12 small-12 columns text-center">
-				<h1>Cheers!</h1>
-			</div>
-		</div><!-- /row -->
+		<div class="hero">
+			<header>
+				<div class="row rowTitle">
+					<div class="large-12 medium-12 small-12 columns text-center">
+						<h1>Cheers!</h1>
+					</div>
+				</div><!-- /row -->
+			</header>
 
-		<div class="row rowDay">
-			<div class="large-12 medium-12 small-12 columns text-center">
-				<h2></h2>
-			</div>
-		</div><!-- /row -->
+			<div class="row rowDay">
+				<div class="large-12 medium-12 small-12 columns text-center">
+					<h2></h2>
+				</div>
+			</div><!-- /row -->
 
-		<div class="row">
+			<div class="row">
+				<div class="large-12 medium-12 small-12 columns text-center">
+					<p class="paraLead">Here are the brews on tap today&#8230;</p>
+				</div>
+			</div><!-- /row -->
+		</div><!-- /hero -->
+
+		<div class="row searchWrap" data-ng-controller="SimpleController">
 			<div class="large-12 medium-12 small-12 columns">
-				<p class="paraLead">Here are the brews on tap today&#58;</p>
-			</div>
-		</div><!-- /row -->
+				<div class="row collapse">
+					<div class="large-8 medium-8 small-12 columns">
+						<input type="text" placeholder="Search brews&#8230;" data-ng-model="name">
+					</div>
+				</div><!-- /row collapse -->
 
-		<div class="row">
-			<div class="large-12 medium-12 small-12 columns">
 				<ul class="listBrews">
-					<li>Jekyll Hop Dang Diggity</li>
-					<li>Terapin Hopsecutioner</li>
-					<li>Ballast Point Pale Ale</li>
+					<li data-ng-repeat="brew in brews | filter: name">{{brew.name}} - {{brew.brewery}} - {{brew.percent}} - {{brew.style}} - {{brew.price}} - {{brew.pour}}</li>
 				</ul>
 			</div>
 		</div><!-- /row -->
@@ -76,5 +84,38 @@
 
 		<!-- SCRIPTS -->
 		<script type="text/javascript" src="assets/js/all.min.js"></script>
+
+		<script type="text/javascript">
+		var beerApp = angular.module('beerApp', []);
+
+		beerApp.controller('SimpleController', function($scope) {
+			$scope.brews = [
+				{
+					name: 'Emergency Drinking Beer',
+					brewery: 'Wild Heaven',
+					percent: '4.00',
+					style: 'ale',
+					price: '$4.00',
+					pour: '12 oz'
+				},
+				{
+					name: 'Mudhoney',
+					brewery: 'Burnt Hickory',
+					percent: '6.80',
+					style: 'brown',
+					price: '$5.00',
+					pour: '8 oz'
+				},
+				{
+					name: 'Moonlight Drive',
+					brewery: 'Southbound',
+					percent: '8.875',
+					style: 'coffee stout',
+					price: '$6.00',
+					pour: '8 oz'
+				}
+			]
+		});
+		</script>
 	</body>
 </html>

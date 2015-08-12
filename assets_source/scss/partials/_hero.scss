@@ -2,44 +2,15 @@
 // Small screens
 @media only screen {
 
-	body {
-		@include fontStd;
-	}
+	div.hero {
+		width: 100%;
+		min-height: 300px;
+		background: url('../../assets/images/bgHero.jpg') top left no-repeat;
+		background-size: cover;
 
-	div.rowTitle {
-		margin-bottom: 1.0em;
-
-		h1 {
-			@include fontBold;
-			text-transform: uppercase;
+		p.paraLead {
 			text-shadow: 4px 4px 9px rgba(32, 32, 32, 0.48);
 			color: darken($white, 13);
-		}
-	}
-
-	div.rowDay {
-		margin-bottom: 1.0em;
-
-		h2 {
-			@include fontStd;
-			text-shadow: 4px 4px 9px rgba(32, 32, 32, 0.48);
-			color: darken($white, 13);
-		}
-	}
-
-	p.paraLead {
-		@include fontSemiBold;
-	}
-
-	ul {
-		margin-left: 0;
-		list-style: none;
-	}
-
-	ul.iconsSocial {
-
-		li {
-			@include inlineBlock;
 		}
 	}
 
@@ -50,15 +21,8 @@
 // Medium screens
 @media only screen and (min-width: 40.063em) {
 
-	p.paraLead {
-		font-size: 1.250em;
-	}
-
-	ul.iconsSocial {
-
-		li:nth-child(-n+2) {
-			margin-right: 0.20em;
-		}
+	div.hero {
+		min-height: 450px;
 	}
 
 } /* min-width 641px, medium screens */
@@ -68,12 +32,8 @@
 // Large screens
 @media only screen and (min-width: 64.063em) {
 
-	div.rowTitle {
-		margin-bottom: 2.0em;
-	}
-
-	div.rowDay {
-		margin-bottom: 2.250em;
+	div.hero {
+		min-height: 600px;
 	}
 
 } /* min-width 1025px, large screens */
