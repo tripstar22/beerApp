@@ -37,6 +37,10 @@ angular
 	.controller('appController', appController);
 
 	function appController(vm, SpreadsheetFactory) {
+		
+		SpreadsheetFactory.getData().then( function (data) {
+			console.log(data)
+		});
 
 		var vm = this;
 		vm.brews = [];
