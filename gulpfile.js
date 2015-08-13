@@ -92,8 +92,9 @@ gulp.task('js', ['clean-dest-js'], function () {
                 base_src + 'bower_components/foundation/foundation.min.js',
                 base_src + 'bower_components/FitText.js/jquery.fittext.js',
                 base_src + 'js/newDay.js',
+                base_src + 'js/appModule.js',
                 base_src + 'js/spreadsheet.service.js',
-                // base_src + 'js/beerController.js',
+                base_src + 'js/appController.js',
                 base_src + 'js/app.js'
             ]
         )

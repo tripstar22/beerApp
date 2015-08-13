@@ -1,11 +1,8 @@
 (function () {
 
-var beerApp = angular
+angular
   .module('beerApp')
-  .factory('Content', SpreadsheetFactory)
-  .controller('beerController', function($scope, SpreadsheetFactory) {
-    $scope.brews = SpreadsheetFactory.getData();
-  });
+  .factory('Content', SpreadsheetFactory);
 
   function SpreadsheetFactory ($http, $q) {
 
