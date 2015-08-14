@@ -32,41 +32,21 @@
 
 (function () {
 
+// var appController = appController();
+
 angular
 	.module('beerApp')
-	.controller('appController', appController);
+	.controller('appController', appController, ['$scope', 'SpreadsheetFactory']);
 
-	function appController(vm, SpreadsheetFactory) {
-		
+	function appController($scope, SpreadsheetFactory) {
+
 		SpreadsheetFactory.getData().then( function (data) {
 			console.log(data)
 		});
 
-		var vm = this;
-		vm.brews = [];
+		// $scope.brews = [];
 
-		return vm.brews;
-
-		// vm.brews = [];
-		// vm.getData = getData;
-
-		// activate();
-
-		// function activate() {
-
-		// 	// return SpreadsheetFactory();
-
-		// }
-
-		// function getData() {
-
-		// 	return appController.getData().then(function(data) {
-
-		// 		vm.brews = data;
-		// 		return vm.brews;
-		// 	});
-		// }
-
+		return data;
 	}
 
 })();

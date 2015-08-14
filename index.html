@@ -52,7 +52,7 @@
 			</div><!-- /row -->
 		</div><!-- /hero -->
 
-		<div class="row searchWrap" data-ng-controller="appController as appController">
+		<div class="row searchWrap" data-ng-controller="appController">
 			<div class="large-12 medium-12 small-12 columns">
 				<div class="row collapse">
 					<div class="large-8 large-centered medium-8 medium-centered small-12 columns">
@@ -61,7 +61,7 @@
 				</div><!-- /row collapse -->
 
 				<ul class="listBrews">
-					<li data-ng-repeat="brew in brews | filter: name | orderBy: 'brewery'">{{brews}}</li>
+					<li data-ng-repeat="data in data | filter: name | orderBy: 'brewery'">{{data}}</li>
 				</ul>
 			</div>
 		</div><!-- /row -->
