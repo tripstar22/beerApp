@@ -32,11 +32,9 @@
 
 (function () {
 
-// var appController = appController();
-
 angular
 	.module('beerApp')
-	.controller('appController', appController, ['$scope', 'SpreadsheetFactory']);
+	.controller('appController', ['$scope', 'SpreadsheetFactory', appController]);
 
 	function appController($scope, SpreadsheetFactory) {
 
