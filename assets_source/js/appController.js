@@ -34,7 +34,7 @@
 
 angular
 	.module('beerApp')
-	.controller('appController', ['$scope', 'SpreadsheetFactory', appController]);
+	.controller('appController', appController);
 
 	function appController($scope, SpreadsheetFactory) {
 
