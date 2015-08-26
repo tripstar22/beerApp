@@ -38,13 +38,11 @@ angular
 
 	function appController($scope, SpreadsheetFactory) {
 
-		// $scope.data = [];
+		SpreadsheetFactory.getData().then( function (content) {
 
-		SpreadsheetFactory.getData().then( function (data) {
-			console.log(data);
+			$scope.content = content;
+			console.log(content);
 		});
-
-		return data;
 	}
 
 })();

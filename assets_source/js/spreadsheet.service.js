@@ -2,7 +2,7 @@
 
 angular
   .module('beerApp')
-  .factory('Content', SpreadsheetFactory);
+  .factory('SpreadsheetFactory', SpreadsheetFactory);
 
   function SpreadsheetFactory ($http, $q) {
 
@@ -20,9 +20,13 @@ angular
       return $http.get(url)
         .success (function (response) {
           angular.forEach(response.feed.entry, function (key, value) {
-            var contentItemName = key.title.$t;
-            var contentItemData = key.gsx$value.$t;
-            content[contentItemName] = contentItemData;
+            var contentItemName = key.content.$t;
+            // var contentItemData = key.gsx$value.$t;
+            content = contentItemName;
+
+            // console.log(contentItemName);
+            // console.log(contentItemData);
+            console.log(content);
           });
         })
         .then (function (response) {
