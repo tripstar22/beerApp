@@ -32,17 +32,58 @@
 
 (function () {
 
+// angular
+// 	.module('beerApp')
+// 	.controller('appController', appController);
+
+// 	function appController($scope, SpreadsheetFactory) {
+
+// 		SpreadsheetFactory.getData().then( function (content) {
+
+// 			$scope.content = content;
+// 			console.log(content);
+// 		});
+// 	}
+
+
 angular
 	.module('beerApp')
-	.controller('appController', appController);
+	.controller('DashCtrl', DashCtrl);
 
-	function appController($scope, SpreadsheetFactory) {
-
-		SpreadsheetFactory.getData().then( function (content) {
-
-			$scope.content = content;
-			console.log(content);
-		});
+	function DashCtrl($scope, SpreadsheetFactory) {
+	  	$scope.content = {};
+	  	SpreadsheetFactory.getData().then( function (data) {
+	    	$scope.content.beers = data;
+	    	$scope.predicate = '';
+	    	$scope.order = function (predicate) {
+	      		$scope.predicate = predicate;
+	    	}
+	  	});
 	}
+
+// .controller('ChatsCtrl', function($scope, Chats) {
+//   // With the new view caching in Ionic, Controllers are only called
+//   // when they are recreated or on app start, instead of every page change.
+//   // To listen for when this page is active (for example, to refresh data),
+//   // listen for the $ionicView.enter event:
+//   //
+//   //$scope.$on('$ionicView.enter', function(e) {
+//   //});
+
+//   $scope.chats = Chats.all();
+//   $scope.remove = function(chat) {
+//     Chats.remove(chat);
+//   };
+// })
+
+// .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
+//   $scope.chat = Chats.get($stateParams.chatId);
+// })
+
+// .controller('AccountCtrl', function($scope) {
+//   $scope.settings = {
+//     enableFriends: true
+//   };
+// });
 
 })();
