@@ -56,8 +56,8 @@ angular
     function getData () {
       return $http.get(url)
         .success (function (response) {
-          console.log('response ----------------------- ');
-          console.log(response);
+          // console.log('response ----------------------- ');
+          // console.log(response);
           angular.forEach(response.feed.entry, function (key, value) {
             var beer = {
               name: key.gsx$name.$t,

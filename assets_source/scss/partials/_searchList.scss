@@ -9,6 +9,11 @@
 			@include borderRadius;
 			border-width: 2px;
 			margin-bottom: 2.0em;
+
+			&:focus {
+				background: $white;
+				border-color: darken($grayLight, 10);
+			}
 		}
 	}
 

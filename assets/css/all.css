@@ -7,7 +7,6 @@
 /*============================================
 =            FOUNDATION COMPONETS            =
 ============================================*/
-@import url(http://fonts.googleapis.com/css?family=Titan+One|Open+Sans:400,600);
 meta.foundation-version {
   font-family: "/5.5.2/"; }
 
@@ -6278,7 +6277,20 @@ th.hide-for-touch {
   ul.iconsSocial li {
     display: -moz-inline-stack;
     display: inline-block;
-    *display: inline; } }
+    *display: inline; }
+    ul.iconsSocial li i {
+      color: #ccc;
+      /*----------  Hover color transition ----------*/
+      -webkit-transition: color 0.3s;
+      -moz-transition: color 0.3s;
+      -o-transition: color 0.3s;
+      -ms-transition: color 0.3s; }
+  ul.iconsSocial li i:hover {
+    color: #999; }
+  ul.listBrews {
+    margin-bottom: 3.0em; }
+    ul.listBrews li {
+      margin-bottom: 0.50em; } }
 
 /* Define mobile styles */
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */
@@ -6286,7 +6298,15 @@ th.hide-for-touch {
   p.paraLead {
     font-size: 1.250em; }
   ul.iconsSocial li:nth-child(-n+2) {
-    margin-right: 0.20em; } }
+    margin-right: 0.20em; }
+  ul.listBrews li {
+    margin-bottom: 0.80em; }
+  ul.listBrews li:nth-child(odd) {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-style: normal; }
+  ul.listBrews li:nth-child(even) {
+    color: gray; } }
 
 /* min-width 641px, medium screens */
 /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
@@ -6337,7 +6357,10 @@ th.hide-for-touch {
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
       border-width: 2px;
-      margin-bottom: 2.0em; } }
+      margin-bottom: 2.0em; }
+      div.searchWrap input:focus {
+        background: #fff;
+        border-color: #b3b3b3; } }
 
 /* Define mobile styles */
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */

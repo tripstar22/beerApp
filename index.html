@@ -9,6 +9,7 @@
 
 		<title>Cheers!</title>
 
+		<link href='https://fonts.googleapis.com/css?family=Titan+One|Open+Sans:400,600' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="assets/css/all.css">
 
 		<!-- Favicon - SVG, PNG, ICO -->
@@ -60,8 +61,8 @@
 					</div>
 				</div><!-- /row collapse -->
 
-				<ul class="listBrews">
-					<li data-ng-repeat="data in data | filter: brewery">{{data}}</li>
+				<ul class="listBrews text-center">
+					<li data-ng-repeat="beer in content.beers | filter: contentItemData">{{beer.brewery}} {{beer.name}}, {{beer.style}}, {{beer.percent}}&#37;, {{beer.pour}}oz, {{beer.price}}</li>
 				</ul>
 			</div>
 		</div><!-- /row -->

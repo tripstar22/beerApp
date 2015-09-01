@@ -46,6 +46,10 @@
 // 	}
 
 
+
+
+
+
 angular
 	.module('beerApp')
 	.controller('DashCtrl', DashCtrl);
@@ -54,12 +58,16 @@ angular
 	  	$scope.content = {};
 	  	SpreadsheetFactory.getData().then( function (data) {
 	    	$scope.content.beers = data;
-	    	$scope.predicate = '';
-	    	$scope.order = function (predicate) {
-	      		$scope.predicate = predicate;
-	    	}
+	    	// $scope.predicate = '';
+	    	// $scope.order = function (predicate) {
+	     //  		$scope.predicate = predicate;
+	    	// }
 	  	});
 	}
+
+
+
+
 
 // .controller('ChatsCtrl', function($scope, Chats) {
 //   // With the new view caching in Ionic, Controllers are only called

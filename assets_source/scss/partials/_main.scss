@@ -40,6 +40,29 @@
 
 		li {
 			@include inlineBlock;
+
+			i {
+				color: $grayLight;
+
+				/*----------  Hover color transition ----------*/
+				-webkit-transition: color 0.3s;
+				-moz-transition: color 0.3s;
+				-o-transition: color 0.3s;
+				-ms-transition: color 0.3s;
+			}
+		}
+
+		li i:hover {
+			color: $grayDark;
+		}
+	}
+
+	ul.listBrews {
+		margin-bottom: 3.0em;
+
+		li {
+			// cursor: pointer;
+			margin-bottom: 0.50em;
 		}
 	}
 
@@ -59,6 +82,23 @@
 		li:nth-child(-n+2) {
 			margin-right: 0.20em;
 		}
+	}
+
+	ul.listBrews li {
+		// display: -moz-inline-stack;
+		// display: inline-block;
+		// *display: inline;
+		margin-bottom: 0.80em;
+		// margin-left: 8px;
+		// margin-right: 8px;
+	}
+
+	ul.listBrews li:nth-child(odd) {
+		@include fontSemiBold;
+	}
+
+	ul.listBrews li:nth-child(even) {
+		color: darken($grayDark, 10);
 	}
 
 } /* min-width 641px, medium screens */
