@@ -1,42 +1,5 @@
 (function () {
 
-// angular
-//   .module('beerApp')
-//   .factory('SpreadsheetFactory', SpreadsheetFactory);
-
-//   function SpreadsheetFactory ($http, $q) {
-
-//     var key = '1dsnPQxSaoTjk0aIu5tsTACDU8uHg2gXUYxWGfKsBF4Y';
-//     var url = 'https://spreadsheets.google.com/feeds/list/' + key + '/od6/public/values?alt=json';
-//     var content = {};
-
-//     var spreadsheetFunctions = {
-//       getData: getData
-//     };
-
-//     return spreadsheetFunctions;
-
-//     function getData () {
-//       return $http.get(url)
-//         .success (function (response) {
-//           angular.forEach(response.feed.entry, function (key, value) {
-//             var contentItemData = [key.content.$t];
-//             content = contentItemData;
-
-//             console.log(content);
-//           });
-//         })
-//         .then (function (response) {
-//           return content;
-//         }, function (response) {
-
-//         });
-//     }
-//   }
-
-
-
-
 angular
   .module('beerApp')
   .factory('SpreadsheetFactory', SpreadsheetFactory);
@@ -79,5 +42,3 @@ angular
   }
 
 })();
-
-
