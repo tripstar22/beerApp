@@ -66,6 +66,10 @@
 		}
 	}
 
+	div.msgNoSearchResults {
+		margin-bottom: 1.50em;
+	}
+
 } /* Define mobile styles */
 
 @media only screen and (max-width: 40em) { } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
@@ -99,6 +103,10 @@
 
 	ul.listBrews li:nth-child(even) {
 		color: darken($grayDark, 10);
+	}
+
+	div.msgNoSearchResults {
+		margin-bottom: 2.50em;
 	}
 
 } /* min-width 641px, medium screens */

@@ -30,6 +30,7 @@ angular
               pour: key.gsx$pour.$t,
               price: key.gsx$price.$t
             };
+            // console.log(beer);
             content.push(beer);
           });
         })

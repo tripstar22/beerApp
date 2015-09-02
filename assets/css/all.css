@@ -6290,7 +6290,9 @@ th.hide-for-touch {
   ul.listBrews {
     margin-bottom: 3.0em; }
     ul.listBrews li {
-      margin-bottom: 0.50em; } }
+      margin-bottom: 0.50em; }
+  div.msgNoSearchResults {
+    margin-bottom: 1.50em; } }
 
 /* Define mobile styles */
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */
@@ -6306,7 +6308,9 @@ th.hide-for-touch {
     font-weight: 600;
     font-style: normal; }
   ul.listBrews li:nth-child(even) {
-    color: gray; } }
+    color: gray; }
+  div.msgNoSearchResults {
+    margin-bottom: 2.50em; } }
 
 /* min-width 641px, medium screens */
 /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
