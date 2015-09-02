@@ -95,6 +95,7 @@ gulp.task('js', ['clean-dest-js'], function () {
                 base_src + 'js/appModule.js',
                 base_src + 'js/spreadsheet.service.js',
                 base_src + 'js/appController.js',
+                base_src + 'js/listLength.js',
                 base_src + 'js/app.js'
             ]
         )
