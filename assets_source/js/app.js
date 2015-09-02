@@ -10,7 +10,7 @@ jQuery(document).ready(function($) {
 		newDay();
 
 		// Add msg if there are no search results
-		$("div.searchWrap input").keydown(listLength);
+		// $("div.searchWrap input").keydown(listLength);
 
 		// control font-size of header elements
 		$("h1").fitText(0.8, {minFontSize: '50px', maxFontSize: '120px'});
