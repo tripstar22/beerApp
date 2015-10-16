@@ -61,7 +61,7 @@
 					<li data-ng-repeat="beer in content.beers | filter: contentItemData">{{beer.brewery}} {{beer.name}}, {{beer.style}}, {{beer.percent}}&#37;, {{beer.pour}}oz, {{beer.price}}</li>
 				</ul>
 
-				<div class="text-center msgNoSearchResults" data-ng-show="content.beers.length < 1">Sorry we currently do not have that beer on tap.</div>
+				<div class="text-center msgNoSearchResults" data-ng-show="!(content.beers| filter:contentItemData).length">Sorry we currently do not have that beer on tap.</div>
 			</div>
 		</div><!-- /row -->
 
